@@ -2,6 +2,8 @@ const Workout = require('../models/workout')
 const Exercise = require('../models/exercise')
 
 
+
+
 function addExerciseToWorkout(req, res, next) {
     Workout.findById(req.params.workoutId)
         .then(workout => {
@@ -16,11 +18,13 @@ function addExerciseToWorkout(req, res, next) {
 }
 
 function deleteExerciseFromWorkout(req, res, next) {
-    Workout.findById(req.params.id)
+    Workout.findById(req.params.workoutId)
+    // console.log(req.params.workoutId)
         .then(workout => {
+            console.log(workout)
             if (!workout.user.equals(req.user._id)) throw new Error('Unauthorized')
 
-            workout.exercises.id(req.params.exerciseId).deleteOne()
+            workout.exercises.pull(req.params.exerciseId)
             return workout.save()
         })
         .then(() => res.redirect(`/workouts/${req.params.workoutId}`))

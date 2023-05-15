@@ -30,15 +30,16 @@
     </thead>
     <tbody>
         <% workout.exercises.forEach(function(exercise) { %>
-            <tr>
-                <td><%= exercise.name %></td>
-                <form action="/exercises/<%= workout.id %>/<%= exercise.id %>?_method=DELETE">
-                    <button type="submit">X</button>
-                </form>
+        <tr>
+            <td><%= exercise.name %></td>
                 <td><%= exercise.weight %></td>
                 <td><%= exercise.sets %></td>
                 <td><%= exercise.reps %></td>
-            </tr>
+                <td><form action="/exercises/<%= workout.id %>/<%= exercise.id %>?_method=DELETE" method="POST">
+                <button type="submit">X</button>
+                </form>
+            </td>
+        </tr>
         <% }); %>
     </tbody>
 </table>
