@@ -1,0 +1,20 @@
+<%- include('../partials/header') %>
+
+<h2>My Workouts</h2>
+
+<a href="/workouts/new">Add a Workout</a>
+
+<ul>
+    <% workouts.forEach(function(workout) { %>
+        <li>
+            <form action="/workouts/<%= workout.id %>?_method=DELETE" method="POST">
+                <button type="submit">X</button>
+            </form>
+            <a href="/workouts/<%= workout.id %>">
+                <%= workout.name %>
+            </a>
+        </li>
+        <% }); %>
+</ul>
+
+<%- include('../partials/footer') %>

@@ -1,0 +1,50 @@
+<%- include('../partials/header.ejs') %>
+
+<h1>
+    <%= workout.name %>
+</h1>
+
+
+
+<h3>Add Exercise</h3>
+<form id="add-exercise-form" method="POST" action="/exercises/<%= workout._id %>">
+    <label for="name">Name:</label>
+    <input type="text" name="name" id="name">
+    <label for="weight">Weight:</label>
+    <input type="number" name="weight" id="weight">
+    <label for="sets">Sets:</label>
+    <input type="number" name="sets" id="sets">
+    <label for="reps">Reps:</label>
+    <input type="number" name="reps" id="reps">
+    <input type="submit" value="Add Exercise">
+</form>
+
+<table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Weight</th>
+            <th>Sets</th>
+            <th>Reps</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% workout.exercises.forEach(function(exercise) { %>
+            <tr>
+                <td><%= exercise.name %></td>
+                <form action="/exercises/<%= workout.id %>/<%= exercise.id %>?_method=DELETE">
+                    <button type="submit">X</button>
+                </form>
+                <td><%= exercise.weight %></td>
+                <td><%= exercise.sets %></td>
+                <td><%= exercise.reps %></td>
+            </tr>
+        <% }); %>
+    </tbody>
+</table>
+
+
+
+<a href="/workouts/<%= workout.id %>/edit">Edit</a>
+
+<%- include('../partials/footer.ejs') %>
