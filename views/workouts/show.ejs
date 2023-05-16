@@ -1,9 +1,15 @@
 <%- include('../partials/header.ejs') %>
 
-<h1 class="text-center">
-    <%= workout.name %>
-</h1>
+<div class="shadow-sm p-3 mb-5 bg-body rounded">
+    <h1 class="text-center" >
+        <%= workout.name %><br>
+    </h1>
+    <h3 class="text-center">
+        <%= workout.date.toLocaleDateString() %>
+    </h3>
+</div>
 
+<div class="shadow-sm p-3 mb-5 bg-body rounded">
 <h3 class="text-center">Add Exercise:</h3>
 
 <form id="add-exercise-form" method="POST" action="/exercises/<%= workout._id %>">
@@ -17,6 +23,9 @@
     <input type="number" name="reps" id="reps">
     <input id="addExercise" type="submit" value="Add Exercise">
 </form>
+</div>
+
+<div class="shadow-sm p-3 mb-5 bg-body rounded">
 
 <h3 class="text-center">Exercise Log:</h3>
 
@@ -47,6 +56,7 @@
         <% }); %>
     </tbody>
 </table>
+</div>
 </div>
 
 <!-- <div class="container">

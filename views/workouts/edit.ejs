@@ -2,6 +2,7 @@
 
 <form action="/workouts/<%= workout.id %>?_method=PUT" method="POST" autocomplete="off">
     <input class="form-control" id=":focus" type="text" name="name" value="<%= workout.name %>">
+    <input class="form-control" id=":focus" type="date" name="date" value="<%= workout.date %>">
     <button type="submit">Update Workout</button>
 </form>
 
