@@ -1,9 +1,12 @@
 <%- include('../partials/header') %>
 
+<div class="shadow-sm p-3 mb-5 bg-body rounded">
 <form action="/workouts/<%= workout.id %>?_method=PUT" method="POST" autocomplete="off">
-    <input class="form-control" id=":focus" type="text" name="name" value="<%= workout.name %>">
-    <input class="form-control" id=":focus" type="date" name="date" value="<%= workout.date %>">
-    <button type="submit">Update Workout</button>
+    <h3>Edit Workout Name:</h3>
+    <input class="form-control" id=":focus" type="text" name="name" value="<%= workout.name %>"><br>
+    <h3>Edit Workout Date:</h3>
+    <input class="form-control" id=":focus" type="date" name="date" value="<%= workout.date %>"><br>
+    <button type="submit" id="updateWorkout" class="btn btn-primary btn-md">Update Workout</button>
 </form>
-
+</div>
 <%- include('../partials/footer') %>

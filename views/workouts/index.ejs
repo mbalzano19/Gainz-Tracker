@@ -28,6 +28,7 @@
             <tr>
                 <th>Delete</th>
                 <th>Name</th>
+                <th>Date</th>
             </tr>
         </thead>
         <tbody>
@@ -42,6 +43,9 @@
                     <a href="/workouts/<%= workout.id %>">
                         <%= workout.name %>
                     </a></td>
+                <td>
+                    <%= workout.date.toLocaleDateString() %>
+                </td>
             </tr>
             <% }); %>
         </tbody>
