@@ -25,12 +25,20 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
-                    <a class="nav-link active" aria-current="page" href="/">Home</a>
+                    <a class="nav-link active" aria-current="page" href="/">
+                        <button type="button" class="btn btn-default navbar-btn">Home</button>
+                    </a>
                     <% if (user) { %>
-                        <a class="nav-link" href="/logout">Log Out</a>
-                        <a class="nav-link" href="/workouts">My Workouts</a>
+                    <a class="nav-link" href="/logout">
+                        <button type="button" class="btn btn-default navbar-btn">Log Out</button>
+                    </a>
+                    <a class="nav-link" href="/workouts">
+                        <button type="button" class="btn btn-default navbar-btn">My Workouts</button>
+                    </a>
                     <% } else { %>
-                        <a class="nav-link" href="/auth/google">Log In</a>
+                    <a class="nav-link" href="/auth/google">
+                        <button type="button" class="btn btn-default navbar-btn">Log In</button>
+                    </a>
                     <% } %>
                 </div>
             </div>

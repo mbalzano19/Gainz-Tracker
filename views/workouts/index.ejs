@@ -1,20 +1,58 @@
 <%- include('../partials/header') %>
 
-<h2>My Workouts</h2>
+<h2 class="text-center">My Workouts</h2>
 
-<a href="/workouts/new">Add a Workout</a>
 
-<ul>
+
+<!-- <div class="workout-container">
+  <ul>
     <% workouts.forEach(function(workout) { %>
-        <li>
-            <form action="/workouts/<%= workout.id %>?_method=DELETE" method="POST">
-                <button type="submit">X</button>
-            </form>
-            <a href="/workouts/<%= workout.id %>">
-                <%= workout.name %>
-            </a>
-        </li>
-        <% }); %>
-</ul>
+    <li>
+      <div class="workout-item">
+          <form action="/workouts/<%= workout.id %>?_method=DELETE" method="POST">
+            <button type="submit" class="btn btn-danger btn-sm">X</button>
+          </form>
+        <a href="/workouts/<%= workout.id %>">
+          <%= workout.name %>
+        </a>
+      </div>
+    </li>
+    <% }); %>
+  </ul>
+</div> -->
+
+
+<div class="table-responsive">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Delete</th>
+                <th>Name</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% workouts.forEach(function(workout) { %>
+            <tr>
+                <td>
+                    <form action="/workouts/<%= workout.id %>?_method=DELETE" method="POST">
+                        <button type="submit" class="btn btn-danger btn-sm">X</button>
+                      </form>
+                </td>
+                <td>        
+                    <a href="/workouts/<%= workout.id %>">
+                        <%= workout.name %>
+                    </a></td>
+            </tr>
+            <% }); %>
+        </tbody>
+    </table>
+    </div>
+
+
+<a href="/workouts/new" id="addWorkout" class="btn btn-primary btn-md" role="button">Add a Workout</a>
+
+
+
+
 
 <%- include('../partials/footer') %>

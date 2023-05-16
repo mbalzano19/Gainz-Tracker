@@ -1,1 +1,42 @@
+/* .workout-container {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 20px;
+} */
 
+.workout-item {
+    display: flex;
+    align-items: center;
+    font-size: 25px;
+}
+
+.workout-item button {
+    margin-left: 10px;
+    margin-right: 20px;
+    size: 5px;
+}
+
+/* body {
+    background-image: url("https://i.imgur.com/M6qM2za.png");
+    background-size: cover;
+
+} */
+
+#add-exercise-form {
+    max-width: 100%;
+    text-align: center;
+    margin-top: 30px;
+}
+
+#addExercise {
+    margin-left: 3vmin;
+    margin-bottom: 40px;
+}
+
+#addWorkout {
+    margin-top: 3vmin;
+}
+
+#editWorkout {
+    margin-top: 3vmin;
+}

@@ -1,12 +1,11 @@
 <%- include('../partials/header.ejs') %>
 
-<h1>
+<h1 class="text-center">
     <%= workout.name %>
 </h1>
 
+<h3 class="text-center">Add Exercise:</h3>
 
-
-<h3>Add Exercise</h3>
 <form id="add-exercise-form" method="POST" action="/exercises/<%= workout._id %>">
     <label for="name">Name:</label>
     <input type="text" name="name" id="name">
@@ -16,36 +15,60 @@
     <input type="number" name="sets" id="sets">
     <label for="reps">Reps:</label>
     <input type="number" name="reps" id="reps">
-    <input type="submit" value="Add Exercise">
+    <input id="addExercise" type="submit" value="Add Exercise">
 </form>
 
-<table>
+<h3 class="text-center">Exercise Log:</h3>
+
+<div class="table-responsive">
+<table class="table table-striped">
     <thead>
         <tr>
             <th>Name</th>
             <th>Weight</th>
             <th>Sets</th>
             <th>Reps</th>
+            <th>Delete</th>
         </tr>
     </thead>
     <tbody>
         <% workout.exercises.forEach(function(exercise) { %>
         <tr>
             <td><%= exercise.name %></td>
-                <td><%= exercise.weight %></td>
-                <td><%= exercise.sets %></td>
-                <td><%= exercise.reps %></td>
-                <td><form action="/exercises/<%= workout.id %>/<%= exercise.id %>?_method=DELETE" method="POST">
-                <button type="submit">X</button>
+            <td><%= exercise.weight %></td>
+            <td><%= exercise.sets %></td>
+            <td><%= exercise.reps %></td>
+            <td>
+                <form action="/exercises/<%= workout.id %>/<%= exercise.id %>?_method=DELETE" method="POST">
+                    <button type="submit" class="btn btn-danger btn-sm">X</button>
                 </form>
             </td>
         </tr>
         <% }); %>
     </tbody>
 </table>
+</div>
+
+<!-- <div class="container">
+    <div class="row"
+        <% workout.exercises.forEach(function(exercise) { %>
+    </div>
+            <div class="col-sm-2"><%= exercise.name %></div>
+                <div class="col-sm-2"><%= exercise.weight %></div>
+                <div class="col-sm-2"><%= exercise.sets %></div>
+                <div class="col-sm-2"><%= exercise.reps %></div>
+                <div class="col-sm-2"><form action="/exercises/<%= workout.id %>/<%= exercise.id %>?_method=DELETE" method="POST">
+                <button type="submit">X</button>
+                </form>
+
+
+        <% }); %>
+
+</div> -->
 
 
 
-<a href="/workouts/<%= workout.id %>/edit">Edit</a>
+
+<a href ="/workouts/<%= workout.id %>/edit" id="editWorkout" class="btn btn-primary btn-md" role="button">Edit Workout</a>
 
 <%- include('../partials/footer.ejs') %>
