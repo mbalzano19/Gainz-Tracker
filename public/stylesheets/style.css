@@ -16,11 +16,13 @@
     size: 5px;
 }
 
-/* body {
-    background-image: url("https://i.imgur.com/UYkRvwI.jpg");
-    background-size: cover;
-
-} */
+body {
+    /* background-image: url("https://i.imgur.com/SlsWDku.png");
+    
+    /* background-size: cover; */
+    background-color: rgb(213, 225, 248);
+    font-family: monospace;
+}
 
 #add-exercise-form {
     max-width: 100%;
@@ -47,6 +49,11 @@
     margin-top: 3vmin;
 } */
 
-#add-note-form {
+/* body  {
+    background-color: cornflowerblue;
+} */
 
-}
+/* main, table {
+    background-color: magenta;
+} */
+
