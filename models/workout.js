@@ -1,6 +1,16 @@
 const mongoose = require('mongoose')
 const exerciseSchema = require('./exercise')
 
+const noteSchema = new mongoose.Schema({
+    content: {
+        type: String,
+        required: true
+    }
+}, {
+    timestamps: true
+});
+
+
 const workoutSchema = new mongoose.Schema({
     name: {
         type: String,
@@ -13,7 +23,8 @@ const workoutSchema = new mongoose.Schema({
     date: {
         type: Date
     },
-    exercises: [exerciseSchema]
+    exercises: [exerciseSchema],
+    notes: [noteSchema]
 }, {
     timestamps: true
 })

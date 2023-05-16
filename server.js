@@ -11,6 +11,7 @@ const methodOverride = require('method-override')
 const indexRouter = require('./routes/index')
 const workoutRouter = require('./routes/workouts')
 const exerciseRouter = require('./routes/exercises')
+const notesRouter = require('./routes/notes')
 
 
 const app = express()
@@ -49,6 +50,7 @@ app.use(express.static(path.join(__dirname, 'public')))
 app.use('/', indexRouter)
 app.use('/workouts', workoutRouter)
 app.use('/exercises', exerciseRouter)
+app.use('/notes', notesRouter)
 
 
 app.use(function (req, res, next) {

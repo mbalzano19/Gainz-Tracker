@@ -59,6 +59,47 @@
 </div>
 </div>
 
+<a href ="/workouts/<%= workout.id %>/edit" id="editWorkout" class="btn btn-primary btn-md" role="button">Edit Workout</a>
+
+
+<h2>Add Note:</h2>
+<form id="add-note-form" method="POST" action="/notes/<%= workout._id %>">
+
+    <textarea name="content" class="form-control" rows="3"></textarea><br>
+    <input type="submit" class="btn btn-primary btn-md" role="button" value="Add Note">
+</form>
+
+<div class="shadow-sm p-3 mb-5 bg-body rounded">
+<div class="table-responsive">
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Date</th>
+            <th>Notes</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% workout.notes.forEach(function(note) { %>
+            <tr>
+                <td><%= note.createdAt.toLocaleDateString() %></td>
+                <td><%= note.content %></td>
+                <td>
+                    <form action="/notes/<%= workout.id %>/<%= note.id %>?_method=DELETE" method="POST">
+                        <button type="submit" class="btn btn-danger btn-sm">X</button>
+                    </form>
+                </td>
+            </tr>
+            <% }); %>
+        </tbody>
+    </table>
+</div>
+</div>
+
+
+
+
+
+
 <!-- <div class="container">
     <div class="row"
         <% workout.exercises.forEach(function(exercise) { %>
@@ -79,6 +120,6 @@
 
 
 
-<a href ="/workouts/<%= workout.id %>/edit" id="editWorkout" class="btn btn-primary btn-md" role="button">Edit Workout</a>
+
 
 <%- include('../partials/footer.ejs') %>
