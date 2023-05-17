@@ -2,8 +2,6 @@ const Workout = require('../models/workout')
 const Exercise = require('../models/exercise')
 
 
-
-
 function addExerciseToWorkout(req, res, next) {
     Workout.findById(req.params.workoutId)
         .then(workout => {
