@@ -64,6 +64,11 @@ body {
 
 #homepage {
     margin-top: 12%;
+    text-shadow:
+    6.7px 6.7px 5.3px rgba(0, 0, 0, 0.085),
+    22.3px 22.3px 17.9px rgba(0, 0, 0, 0.125),
+    100px 100px 80px rgba(0, 0, 0, 0.21);
+    color:rgb(33, 33, 33)
 }
 
 body {
@@ -88,4 +93,13 @@ body {
 .navbar-btn:hover {
     background-color: #3b9df8; /* Add the desired hover background color */
     color: #333; /* Add the desired hover text color */
+}
+
+#myworkouts {
+    font-size: 20px;
+}
+
+h1 {
+    font-size: 50px;
+    font-weight: ;
 }
