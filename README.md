@@ -1,5 +1,7 @@
 # Gainz Tracker 💪
 
+## Description
+
 Gainz Tracker is an app that allows you to track your workout gainz! Gainz Tracker allows you to create a workout log for a specific date, add exercises you completed that workout (including: sets, reps, and weight), and add notes about the workout.
 
 # Screenshots
