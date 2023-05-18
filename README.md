@@ -42,7 +42,7 @@ Gainz Tracker is an app that allows you to track your workout gainz! With Gainz 
 
 [Click to Use the Gainz Tracker!](https://gainztracker.fly.dev/)
 
-[Link to Trello Board](https://trello.com/b/SE8aNwY9/project-2)
+[Link to Trello Board](https://trello.com/invite/b/SE8aNwY9/ATTI2d3aba55846598afe3a91f41373e6823C1C8225A/gainz-tracker)
 
 ## How To Use The Gainz Tracker:
 - First, login to the Gainz Tracker using your Google Account.
