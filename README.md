@@ -2,7 +2,7 @@
 
 ## Description:
 
-Gainz Tracker is an app that allows you to track your workout gainz! With Gainz Tracker you can create a workout log for a specific date, add exercises to the Exercise Log for that workout (including: sets, reps, and weight), and add notes to the workout.
+Gainz Tracker is an app that allows you to track your workout gainz! With Gainz Tracker you can create a workout log for a specific date, add exercises to the Exercise Log for that workout (including: sets, reps, and weight), and add notes to the workout log.
 
 ## Screenshots:
 #### Homepage:
@@ -42,7 +42,7 @@ Gainz Tracker is an app that allows you to track your workout gainz! With Gainz 
 
 [Click to Use the Gainz Tracker!](https://gainztracker.fly.dev/)
 
-[Link to Trello planning Board](https://trello.com/b/SE8aNwY9/project-2)
+[Link to Trello Board](https://trello.com/b/SE8aNwY9/project-2)
 
 ## How To Use The Gainz Tracker:
 - First, login to the Gainz Tracker using your Google Account.
@@ -60,6 +60,6 @@ Gainz Tracker is an app that allows you to track your workout gainz! With Gainz 
 
 ## Next Steps:
 
-- Add feature that compiles data from completed workouts and presents them in different formats for the user to view
-- Add feature that allows user to view and sort through workouts based on day or week
-- Add feature that allows user to favorite a workout and save for later in their account
+- Add feature that compiles data from completed workouts and presents them in different formats for the user to view.
+- Add feature that allows user to view and sort through workouts based on day or week.
+- Add feature that allows user to favorite a workout and save for later in their account.
