@@ -14,14 +14,15 @@ const noteSchema = new mongoose.Schema({
 const workoutSchema = new mongoose.Schema({
     name: {
         type: String,
-        // required: true
+        required: true
     },
     user: {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'User'
     },
     date: {
-        type: Date
+        type: Date,
+        required: true
     },
     exercises: [exerciseSchema],
     notes: [noteSchema]

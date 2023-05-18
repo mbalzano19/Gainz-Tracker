@@ -103,3 +103,71 @@ h1 {
     font-size: 50px;
     font-weight: ;
 }
+
+/* @keyframes fadein {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  * {
+    animation: fadeIn .3s ease-in-out;
+  } */
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  .fade-in-element {
+    animation: fadeIn 1s ease-in-out;
+  }
+
+  @keyframes fadeIn2 {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  .fade-in-element2 {
+    animation: fadeIn 2s ease-in-out;
+  }
+
+  @keyframes fadeIn3 {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  .fade-in-element3 {
+    animation: fadeIn .5s ease-in-out;
+  }
+
+  @keyframes fadeIn4 {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  .fade-in-element4 {
+    animation: fadeIn 3s ease-in-out;
+  }
+
+
+

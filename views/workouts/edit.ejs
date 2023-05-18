@@ -1,11 +1,11 @@
 <%- include('../partials/header') %>
 
-<div class="shadow-sm p-3 mb-5 bg-dark rounded">
+<div class="shadow-sm p-3 mb-5 bg-dark rounded fade-in-element">
     <form action="/workouts/<%= workout.id %>?_method=PUT" method="POST" autocomplete="off">
         <h3 class="text-light">Edit Workout Name:</h3>
-        <input class="form-control" id=":focus" type="text" name="name" value="<%= workout.name %>"><br>
+        <input class="form-control" id=":focus" type="text" name="name" required value="<%= workout.name %>"><br>
         <h3 class="text-light">Edit Workout Date:</h3>
-        <input class="form-control" id=":focus" type="date" name="date" value="<%= workout.date %>"><br>
+        <input class="form-control" id=":focus" type="date" name="date" required value="<%= workout.date %>"><br>
         <button type="submit" id="updateWorkout" class="btn btn-primary btn-md">Update Workout</button>
     </form>
 </div>
