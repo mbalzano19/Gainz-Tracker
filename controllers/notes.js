@@ -14,11 +14,8 @@ function create(req, res, next) {
 
 function deleteNoteFromWorkout(req, res, next) {
     Workout.findById(req.params.workoutId)
-    // console.log(req.params.workoutId)
         .then(workout => {
-            // console.log(workout)
             if (!workout.user.equals(req.user._id)) throw new Error('Unauthorized')
-
             workout.notes.pull(req.params.noteId)
             return workout.save()
         })

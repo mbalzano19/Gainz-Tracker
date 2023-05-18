@@ -48,7 +48,6 @@ function update(req, res, next) {
     Workout.findById(req.params.id)
         .then(workout => {
             if (!workout.user.equals(req.user._id)) throw new Error('Unauthorized')
-
             return workout.updateOne(req.body)
         })
         .then(() => res.redirect(`/workouts/${req.params.id}`))
@@ -59,7 +58,6 @@ function deleteWorkout(req, res, next) {
     Workout.findById(req.params.id)
         .then(workout => {
             if (!workout.user.equals(req.user._id)) throw new Error('Unauthorized')
-
             return workout.deleteOne(req.body)
         })
         .then(() => res.redirect('/workouts'))

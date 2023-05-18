@@ -10,93 +10,93 @@
     <div class="d-flex justify-content-center">
         <a href ="/workouts/<%= workout.id %>/edit" id="editWorkout" class="btn btn-primary btn-md" role="button">Edit Workout</a>
     </div>
-<!-- </div> -->
 
 
-<div class="shadow-sm p-3 mb-5 bg-dark rounded fade-in-element">
-    <h3 class="text-center text-light">Add Exercise:</h3>
 
-    <form id="add-exercise-form" class="form" method="POST" action="/exercises/<%= workout._id %>">
-        <label for="name" class="text-light">Name:</label>
-        <input type="text" name="name" id="name" required>
-        <label for="weight" class="text-light">Weight:</label>
-        <input type="number" name="weight" id="weight" required min="0">
-        <label for="sets" class="text-light">Sets:</label>
-        <input type="number" name="sets" id="sets" required min="0">
-        <label for="reps" class="text-light">Reps:</label>
-        <input type="number" name="reps" id="reps" required min="0">
-        <input id="addExercise" type="submit" class="btn btn-primary btn-md" role="button" value="Add Exercise">
-    </form>
-</div>
+    <div class="shadow-sm p-3 mb-5 bg-dark rounded fade-in-element">
+        <h3 class="text-center text-light">Add Exercise:</h3>
 
-<div class="shadow-sm p-3 mb-5 bg-dark rounded fade-in-element2">
-    <h3 class="text-center text-light">Exercise Log:</h3><br>
-    <div class="table-responsive">
-        <table class="table table-striped table-dark">
-            <thead>
-                <tr>
-                <th>Name:</th>
-                <th>Weight (lbs):</th>
-                <th>Sets:</th>
-                <th>Reps:</th>
-                <th>Delete</th>
-                </tr>
-            </thead>
-            <tbody>
-                <% workout.exercises.forEach(function(exercise) { %>
-                    <tr>
-                    <td><%= exercise.name %></td>
-                    <td><%= exercise.weight %></td>
-                    <td><%= exercise.sets %></td>
-                    <td><%= exercise.reps %></td>
-                    <td>
-                    <form action="/exercises/<%= workout.id %>/<%= exercise.id %>?_method=DELETE" method="POST">
-                        <button type="submit" class="btn btn-danger btn-sm">X</button>
-                    </form>
-                    </td>
-                    </tr>
-                <% }); %>
-            </tbody>
-        </table>
-    </div><br>
-</div>
-
-
-<div class="shadow-sm p-3 mb-5 bg-dark rounded fade-in-element4">
-    <h3 class="text-light">Add Note:</h3>
-    <form id="add-note-form" method="POST" action="/notes/<%= workout._id %>">
-    <textarea name="content" class="form-control" rows="3" required></textarea><br>
-    <input type="submit" class="btn btn-primary btn-md fade-in-element4" role="button" value="Add Note">
-    </form><br>
-</div>
-
-<div class="shadow-sm p-3 mb-5 bg-dark rounded fade-in-element4">
-    <div class="table-responsive">
-        <table class="table table-striped table-dark">
-            <thead>
-                <tr>
-                    <h3 class="text-light">Notes:</h3><br>
-                    <th>Date Added:</th>
-                    <th>Notes:</th>
-                    <th>Delete</th>
-                </tr>
-            </thead>
-            <tbody>
-                <% workout.notes.forEach(function(note) { %>
-                    <tr>
-                    <td><%= note.createdAt.toLocaleDateString() %></td>
-                    <td><%= note.content %></td>
-                    <td>
-                    <form action="/notes/<%= workout.id %>/<%= note.id %>?_method=DELETE" method="POST">
-                        <button type="submit" class="btn btn-danger btn-sm">X</button>
-                    </form>
-                    </td>
-                    </tr>
-                <% }); %>
-            </tbody>
-        </table>
+        <form id="add-exercise-form" class="form" method="POST" action="/exercises/<%= workout._id %>">
+            <label for="name" class="text-light">Name:</label>
+            <input type="text" name="name" id="name" required>
+            <label for="weight" class="text-light">Weight:</label>
+            <input type="number" name="weight" id="weight" required min="0">
+            <label for="sets" class="text-light">Sets:</label>
+            <input type="number" name="sets" id="sets" required min="0">
+            <label for="reps" class="text-light">Reps:</label>
+            <input type="number" name="reps" id="reps" required min="0">
+            <input id="addExercise" type="submit" class="btn btn-primary btn-md" role="button" value="Add Exercise">
+        </form>
     </div>
-</div>
+
+    <div class="shadow-sm p-3 mb-5 bg-dark rounded fade-in-element2">
+        <h3 class="text-center text-light">Exercise Log:</h3><br>
+        <div class="table-responsive">
+            <table class="table table-striped table-dark">
+                <thead>
+                    <tr>
+                    <th>Name:</th>
+                    <th>Weight (lbs):</th>
+                    <th>Sets:</th>
+                    <th>Reps:</th>
+                    <th>Delete</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% workout.exercises.forEach(function(exercise) { %>
+                        <tr>
+                        <td><%= exercise.name %></td>
+                        <td><%= exercise.weight %></td>
+                        <td><%= exercise.sets %></td>
+                        <td><%= exercise.reps %></td>
+                        <td>
+                        <form action="/exercises/<%= workout.id %>/<%= exercise.id %>?_method=DELETE" method="POST">
+                            <button type="submit" class="btn btn-danger btn-sm">X</button>
+                        </form>
+                        </td>
+                        </tr>
+                    <% }); %>
+                </tbody>
+            </table>
+        </div><br>
+    </div>
+
+
+    <div class="shadow-sm p-3 mb-5 bg-dark rounded fade-in-element4">
+        <h3 class="text-light">Add Note:</h3>
+        <form id="add-note-form" method="POST" action="/notes/<%= workout._id %>">
+        <textarea name="content" class="form-control" rows="3" required></textarea><br>
+        <input type="submit" class="btn btn-primary btn-md fade-in-element4" role="button" value="Add Note">
+        </form><br>
+    </div>
+
+    <div class="shadow-sm p-3 mb-5 bg-dark rounded fade-in-element4">
+        <div class="table-responsive">
+            <table class="table table-striped table-dark">
+                <thead>
+                    <tr>
+                        <h3 class="text-light">Notes:</h3><br>
+                        <th>Date Added:</th>
+                        <th>Notes:</th>
+                        <th>Delete</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% workout.notes.forEach(function(note) { %>
+                        <tr>
+                        <td><%= note.createdAt.toLocaleDateString() %></td>
+                        <td><%= note.content %></td>
+                        <td>
+                        <form action="/notes/<%= workout.id %>/<%= note.id %>?_method=DELETE" method="POST">
+                            <button type="submit" class="btn btn-danger btn-sm">X</button>
+                        </form>
+                        </td>
+                        </tr>
+                    <% }); %>
+                </tbody>
+            </table>
+        </div>
+    </div>
 </div>
 
 

@@ -10,7 +10,6 @@ const noteSchema = new mongoose.Schema({
     timestamps: true
 });
 
-
 const workoutSchema = new mongoose.Schema({
     name: {
         type: String,

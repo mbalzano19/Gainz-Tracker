@@ -16,7 +16,6 @@ function deleteExerciseFromWorkout(req, res, next) {
     Workout.findById(req.params.workoutId)
         .then(workout => {
             if (!workout.user.equals(req.user._id)) throw new Error('Unauthorized')
-
             workout.exercises.pull(req.params.exerciseId)
             return workout.save()
         })
