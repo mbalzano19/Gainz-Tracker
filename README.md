@@ -22,7 +22,7 @@ Gainz Tracker is an app that allows you to track your workout gainz! Gainz Track
 
 # Getting Started
 
-[Click to Play Spaceman!](https://mbalzano19.github.io/Spaceman/)
+[Click to Use the Gainz Tracker!]()
 
 [Link to Trello planning Board](https://trello.com/b/SE8aNwY9/project-2)
 
