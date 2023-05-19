@@ -33,9 +33,11 @@ Gainz Tracker is an app that allows you to track your workout gainz! With Gainz 
 - Bootstrap
 - Express
 - EJS
+- Node.js
 - Mongoose
 - MongoDB
 - Google OAuth
+- fly.io
 - [Background](https://codepen.io/P1N2O/pen/pyBNzX)
 
 ## Getting Started
